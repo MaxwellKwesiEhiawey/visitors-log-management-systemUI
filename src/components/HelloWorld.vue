@@ -92,6 +92,9 @@
       </li>
     </ul>
   </div>
+  <footer class="page-footer" >
+    <p>Amalitech © {{ new Date().getFullYear() }}. All rights reserved.</p>
+  </footer>
 </template>
 
 <script>
@@ -106,6 +109,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
+  
   margin: 40px 0 0;
 }
 ul {
@@ -118,5 +122,17 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.page-footer {
+  display: inline-block;
+  background-color: #690009;
+  height: 45px;
+  width: 100%; 
+  padding: 10px 0 0 450px ;
+  padding-right: 60px;
+  color: #ffa33b;
+  text-align: left;
+  max-width: 100%;
 }
 </style>
