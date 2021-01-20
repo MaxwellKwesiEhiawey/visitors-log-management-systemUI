@@ -79,7 +79,7 @@ Amalitech Front-Desk Portal
   font-size:25px;
   height: 45px;
   width: 1270px;
-  padding: 1px 0 0 5px;
+  padding: 6px 0 0 5px;
   padding-right: 90px;
   color: #eb8818;
   align-items: left;
