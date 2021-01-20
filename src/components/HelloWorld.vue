@@ -1,15 +1,15 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
+    <!-- <h1>{{ msg }}</h1> -->
+    <!-- <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
         >vue-cli documentation</a
       >.
     </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
+    <h3>Installed CLI Plugins</h3> -->
+    <!-- <ul>
       <li>
         <a
           href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
@@ -34,8 +34,26 @@
           >eslint</a
         >
       </li>
-    </ul>
-    <h3>Essential Links</h3>
+    </ul> -->
+    <h3>Essential Notices !!!</h3>
+    <typical
+      :steps="['Hello', 1000, 'Hello world!', 500]"
+      :wrapper="'h2'"
+    ></typical>
+    <typical
+      class="typicalWrapper"
+      :steps="[
+        'Hi',
+        1000,
+        'Awesome to see!',
+        500,
+        'Awesome to see you! Aha :-) 👋',
+        1000
+      ]"
+      :loop="3"
+      :wrapper="'h3'"
+    ></typical>
+    <!-- <h3>Essential Links</h3>
     <ul>
       <li>
         <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
@@ -59,8 +77,8 @@
         <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
       </li>
     </ul>
-    <h3>Ecosystem</h3>
-    <ul>
+    <h3>Ecosystem</h3> -->
+    <!-- <ul>
       <li>
         <a href="https://router.vuejs.org" target="_blank" rel="noopener"
           >vue-router</a
@@ -90,11 +108,8 @@
           >awesome-vue</a
         >
       </li>
-    </ul>
+    </ul> -->
   </div>
-  <footer class="page-footer" >
-    <p>Amalitech © {{ new Date().getFullYear() }}. All rights reserved.</p>
-  </footer>
 </template>
 
 <script>
@@ -108,9 +123,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  
+h3 { 
   margin: 40px 0 0;
+  color:#bb0312;
+  padding: 40px;
 }
 ul {
   list-style-type: none;
@@ -124,15 +140,36 @@ a {
   color: #42b983;
 }
 
-.page-footer {
-  display: inline-block;
-  background-color: #690009;
-  height: 45px;
-  width: 100%; 
-  padding: 10px 0 0 450px ;
-  padding-right: 60px;
-  color: #ffa33b;
-  text-align: left;
-  max-width: 100%;
+/* .blinking{
+	animation:blinkingText 1.30s infinite;
+  font-size: 20px;
+padding-left: 200px;
+padding-top: 30px;
+text-align: center;
+color:  rgb(201, 9, 57) ;
+}
+@keyframes blinkingText{
+	25%{		color: rgb(247, 143, 73);	}
+	49%{	color: transparent;	}
+	50%{	color: transparent;	}
+	99%{	color:transparent;	}
+	100%{	color: rgb(233, 7, 7);	}
+  
+} */
+#blink-flash{
+  text-align: center;
+  align-content: center;
+  padding-top: 20px;
+}
+
+.typicalWrapper::after {
+  content: "Please Wash Your Hands, Sanitize and Mask-up !!!";
+  animation: blink 3s infinite step-start;
+  color: red;
+  padding: 40px;
+}
+
+@keyframes blink {
+  50% {opacity:0; }
 }
 </style>

@@ -1,21 +1,31 @@
 <template>
-<div  id="warning" light>   <a href="/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWdYrYoPZbkz2o-Cvb9cpnqVRTgYozkj4gyg&usqp=CAU" alt="" class="logo-img"></a>
+<div  id="warning" light><a href="/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWdYrYoPZbkz2o-Cvb9cpnqVRTgYozkj4gyg&usqp=CAU" alt="" class="logo-img"></a>
 Amalitech Front-Desk Portal
 </div>
   <div id="nav">
     <router-link to="/"><button class="btn">Home</button></router-link>
-    <router-link to="/about"><button class="btn">About</button></router-link>
-<router-link to="/SignOut"><button class="btn">SignOut</button></router-link>
-    </div>
+    <router-link to="/about"
+      ><button class="btn">Staff Sign In</button></router-link
+    >
+    <router-link to="/guest"
+      ><button class="btn">Guest Sign In</button></router-link
+    >
+    <router-link to="/SignOut"
+      ><button class="btn">SignOut</button></router-link>
+      <router-link to="/admin"><button class="btn">Admin</button></router-link>
+  </div>
   <router-view />
+  <footer class="page-footer">
+    <p>Amalitech © {{ new Date().getFullYear() }}. All rights reserved.</p>
+  </footer>
 </template>
 
 <style>
 .logo-img{
-  padding: 0 4rem;
+  padding: 0 5rem;
   margin: 3px;
   width: 10%;
-  height: 60%;
+  height: 65%;
 }
 #app {
   font:montserrat;
@@ -23,6 +33,11 @@ Amalitech Front-Desk Portal
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background: #ebe4dd;
+  padding-bottom:inherit;
+  width: 100%;
+  max-width: 100%;
+  background-size:100%;
 }
 
 #nav {
@@ -31,6 +46,7 @@ Amalitech Front-Desk Portal
   display: flex;
   padding: 0 2px;
   margin: 0px;
+  padding-left: 30px;
   justify-content: space-between;
 }
 
@@ -42,27 +58,32 @@ Amalitech Front-Desk Portal
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+.page-footer {
+  display: inline-block;
+  background-color: #690009;
+  height: 40px;
+  width: 980px; 
+  padding: 10px 0 0 450px ;
+  color: #ffa33b;
+  text-align: left;
+  max-width: 920px;
+  margin-top: 20px;
+}
 </style>
 
 <style scoped>
 #warning {
   display: inline-block;
   background-color: #690009;
-  height: 35px;
-  width: 1200%;
-  padding: 10px 0 0 30px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:25px;
+  height: 45px;
+  width: 1270px;
+  padding: 1px 0 0 5px;
   padding-right: 90px;
   color: #eb8818;
   align-items: left;
-  max-width: 120%;
-}
-#warning{
-  font-size: 25px;
-  color: rgb(243, 151, 13);
-  text-align: justify;
-  -webkit-animation: glow 2s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 3s ease-in-out infinite alternate;
+  max-width: 100%;
 }
 
 /* @-webkit-keyframes glow {
@@ -76,7 +97,7 @@ Amalitech Front-Desk Portal
 
 .btn {
   display: inline-block;
-  padding: 0.8rem 2rem;
+  padding: 0.28rem 2rem;
   text-decoration: none;
   font: inherit;
   font-size: 20px;
